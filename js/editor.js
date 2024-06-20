@@ -61,7 +61,9 @@ onload = function () {
   editor.on("change", function () {
     set_saved(false);
     clearTimeout(preview_timer);
-    preview_timer = setTimeout(function () {}, 500);
+    preview_timer = setTimeout(function () {
+      RenderMarkdown($("#editor-preview"), editor.getValue());
+    }, 500);
   });
   $("#new").on("click", function () {
     var x = window.screenX + 10;

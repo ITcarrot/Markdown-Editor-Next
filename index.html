@@ -51,6 +51,15 @@
 
     <script src="js/editor.js"></script>
     <link rel="stylesheet" href="css/editor.css" />
+
+    <script src="node_modules/marked/marked.min.js"></script>
+    <script src="node_modules/katex/dist/katex.js"></script>
+    <script src="node_modules/katex/dist/contrib/auto-render.js"></script>
+    <link rel="stylesheet" href="node_modules/katex/dist/katex.css" />
+    <script src="prism/prism.js"></script>
+    <link rel="stylesheet" href="prism/prism.css" />
+    <script src="js/render.js"></script>
+    <link rel="stylesheet" href="css/render.css" />
   </head>
   <body>
     <div class="text-right" style="padding-right: 20px">
@@ -84,6 +93,10 @@
     <div class="blog-content-md-editor-in">
       <div class="col-xs-6" style="padding: 0; height: 100%">
         <div id="editor" style="height: 100%"></div>
+      </div>
+      <div class="col-xs-6" style="height:100%;overflow:auto" deep="6">
+        <article id="editor-preview"></article>
+        <div style="height:300px"></div>
       </div>
     </div>
 
