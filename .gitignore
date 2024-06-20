@@ -17,3 +17,12 @@
 !/node_modules/bootstrap/dist/js
 /node_modules/bootstrap/dist/js/*
 !/node_modules/bootstrap/dist/js/bootstrap.js
+
+!/node_modules/codemirror
+/node_modules/codemirror/*
+!/node_modules/codemirror/addon
+!/node_modules/codemirror/lib
+!/node_modules/codemirror/mode
+/node_modules/codemirror/mode/*
+!/node_modules/codemirror/mode/markdown
+!/node_modules/codemirror/mode/xml

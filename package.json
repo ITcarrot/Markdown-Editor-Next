@@ -4,6 +4,7 @@
   "main": "index.html",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "codemirror": "^5.65.16",
     "jquery": "^3.7.1",
     "jquery-autosize": "^1.18.18"
   }
