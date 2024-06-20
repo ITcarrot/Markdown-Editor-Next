@@ -1,0 +1,10 @@
+{
+  "name": "MarkdownEditor",
+  "version": "0.0.1",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "jquery-autosize": "^1.18.18"
+  }
+}

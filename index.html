@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Markdown Editor</title>
+    <meta charset="utf-8" />
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery-autosize/jquery.autosize.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap-custom.css" />
+    <link rel="stylesheet" href="css/uoj-theme.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="text-right" style="padding-right: 20px">
+      <ul class="nav nav-tabs" role="tablist">
+        <li>
+          <a id="new"> <img src="img/file_add.png" /> 新建 </a>
+        </li>
+        <li>
+          <a id="open"><img src="img/file.png" /> 打开 </a>
+        </li>
+        <li>
+          <a id="save"><img src="img/diskette.png" /> 保存 </a>
+        </li>
+        <li><a id="print"> 打印 </a></li>
+        <li><a id="button-math-editor"> 数学公式编辑器 </a></li>
+        <li><a id="button-image-selector"> 图片管理 </a></li>
+        <span id="save-tag">*</span
+        ><label>Filename: </label
+        ><span id="filename">[no document loaded]</span>
+      </ul>
+    </div>
+
+    <div id="div-image-selector" style="display: none; background: white">
+      TODO
+    </div>
+
+    <div id="div-math-editor" style="display: none; background: white">
+      TODO
+    </div>
+
+    <div class="blog-content-md-editor-in">TODO</div>
+
+    <input style="display: none" id="openFile" type="file" />
+    <input style="display: none" id="saveFile" type="file" nwsaveas />
+  </body>
+</html>
