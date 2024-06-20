@@ -30,6 +30,12 @@ function save() {
   set_saved(true);
 }
 
+function InsertAtCursor(string) {
+  var doc = editor.getDoc();
+  var cursor = doc.getCursor();
+  doc.replaceRange(string, cursor);
+}
+
 onload = function () {
   // init_editor
   editor = CodeMirror($("#editor")[0], {

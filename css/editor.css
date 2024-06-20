@@ -10,7 +10,6 @@
   position: absolute;
   top: 50px;
   bottom: 0;
-  z-index: -1;
 }
 .blog-content-md-editor-preview {
   width: 100%;

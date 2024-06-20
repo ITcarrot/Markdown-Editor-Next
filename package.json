@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "main": "index.html",
   "dependencies": {
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^3.4.1",
     "codemirror": "^5.65.16",
     "jquery": "^3.7.1",
-    "jquery-autosize": "^1.18.18",
     "katex": "^0.16.10",
     "marked": "^13.0.0"
   }

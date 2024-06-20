@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/jquery-autosize/jquery.autosize.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/bootstrap-custom.css" />
     <link rel="stylesheet" href="css/uoj-theme.css" />
@@ -60,6 +59,9 @@
     <link rel="stylesheet" href="prism/prism.css" />
     <script src="js/render.js"></script>
     <link rel="stylesheet" href="css/render.css" />
+
+    <script src="js/math-editor.js"></script>
+    <link rel="stylesheet" href="css/math-editor.css" />
   </head>
   <body>
     <div class="text-right" style="padding-right: 20px">
@@ -86,17 +88,60 @@
       TODO
     </div>
 
-    <div id="div-math-editor" style="display: none; background: white">
-      TODO
+    <div id="div-math-editor" style="display: none">
+      <div class="row text-center">
+        <div
+          class="col-md-6"
+          style="float: right; z-index: 2; background: rgba(255, 255, 255, 0.5)"
+        >
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#tab-color" data-toggle="tab">颜色</a>
+            </li>
+            <li><a href="#tab-big-op" data-toggle="tab">大运算符</a></li>
+            <li><a href="#tab-mid-op" data-toggle="tab">运算符</a></li>
+            <li><a href="#tab-bf-op" data-toggle="tab">指示符</a></li>
+            <li><a href="#tab-cmp" data-toggle="tab">逻辑运算符</a></li>
+            <li><a href="#tab-bracket" data-toggle="tab">括号</a></li>
+            <li><a href="#tab-space" data-toggle="tab">空格</a></li>
+            <li><a href="#tab-symbol" data-toggle="tab">奇怪的符号</a></li>
+            <li><a href="#tab-sup" data-toggle="tab">上下标</a></li>
+            <li><a href="#tab-arrow" data-toggle="tab">箭头</a></li>
+            <li><a href="#tab-func" data-toggle="tab">函数</a></li>
+            <li><a href="#tab-multi" data-toggle="tab">多行表达式</a></li>
+            <li>
+              <a onclick="window.open('https://katex.org/docs/supported.html')"
+                >说明书链接</a
+              >
+            </li>
+          </ul>
+          <div class="top-buffer-md"></div>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-color"></div>
+            <div class="tab-pane" id="tab-big-op"></div>
+            <div class="tab-pane" id="tab-mid-op"></div>
+            <div class="tab-pane" id="tab-bf-op"></div>
+            <div class="tab-pane" id="tab-cmp"></div>
+            <div class="tab-pane" id="tab-bracket"></div>
+            <div class="tab-pane" id="tab-space"></div>
+            <div class="tab-pane" id="tab-symbol"></div>
+            <div class="tab-pane" id="tab-sup"></div>
+            <div class="tab-pane" id="tab-arrow"></div>
+            <div class="tab-pane" id="tab-func"></div>
+            <div class="tab-pane" id="tab-multi"></div>
+          </div>
+        </div>
+      </div>
+      <hr />
     </div>
 
     <div class="blog-content-md-editor-in">
       <div class="col-xs-6" style="padding: 0; height: 100%">
         <div id="editor" style="height: 100%"></div>
       </div>
-      <div class="col-xs-6" style="height:100%;overflow:auto" deep="6">
+      <div class="col-xs-6" style="height: 100%; overflow: auto" deep="6">
         <article id="editor-preview"></article>
-        <div style="height:300px"></div>
+        <div style="height: 300px"></div>
       </div>
     </div>
 
