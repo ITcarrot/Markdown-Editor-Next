@@ -20,6 +20,7 @@ function RenderMarkdown(dest, content) {
     );
     $(this).wrap('<div class="table-responsive"></div>');
   });
+  imgParseHtml(dest);
   Prism.highlightAll();
   renderMathInElement(dest[0], MathConfig);
 }

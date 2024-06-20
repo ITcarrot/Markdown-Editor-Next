@@ -62,6 +62,9 @@
 
     <script src="js/math-editor.js"></script>
     <link rel="stylesheet" href="css/math-editor.css" />
+
+    <script src="js/image.js"></script>
+    <link rel="stylesheet" href="css/image.css" />
   </head>
   <body>
     <div class="text-right" style="padding-right: 20px">
@@ -84,8 +87,21 @@
       </ul>
     </div>
 
-    <div id="div-image-selector" style="display: none; background: white">
-      TODO
+    <div id="div-image-selector" style="display: none">
+      <div class="row text-center">
+        <input
+          class="form-control input-sm top-buffer-md bot-buffer-md"
+          style="display: inline; width: 200px"
+          id="paste-img"
+          placeholder="在此处粘贴图片"
+        />
+        <button class="btn btn-primary btn-sm" onclick="$('#openImg').click()">
+          浏览图片
+        </button>
+        <input style="display: none" id="openImg" type="file" />
+      </div>
+      <div id="img-pool"></div>
+      <hr />
     </div>
 
     <div id="div-math-editor" style="display: none">

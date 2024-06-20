@@ -21,7 +21,7 @@ function set_saved(val) {
 }
 
 function save() {
-  fs.writeFile(FileEntry, editor.getValue(), function (err) {
+  fs.writeFile(FileEntry, editor.getValue() + getImgStr(), function (err) {
     if (err) {
       alert("Write failed: " + err);
       return;
@@ -71,6 +71,17 @@ onload = function () {
       RenderMarkdown($("#editor-preview"), editor.getValue());
     }, 500);
   });
+  editor.on("paste", function (editor, e) {
+    if (!(e.clipboardData && e.clipboardData.files[0])) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.readAsDataURL(e.clipboardData.files[0]);
+    reader.onload = function (evt) {
+      str = addImg(evt.target.result);
+      InsertAtCursor("![](" + str + ")");
+    };
+  });
   $("#new").on("click", function () {
     var x = window.screenX + 10;
     var y = window.screenY + 10;
@@ -91,7 +102,7 @@ onload = function () {
       FileEntry = newFileEntry;
       document.title = FileEntry;
       $("#filename").text(FileEntry);
-      data = String(data);
+      data = imgExtract(String(data));
       editor.setValue(data);
       set_saved(true);
     });
