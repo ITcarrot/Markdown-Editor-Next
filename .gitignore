@@ -37,3 +37,17 @@
 !/node_modules/katex/dist/fonts
 !/node_modules/katex/dist/katex.js
 !/node_modules/katex/dist/katex.css
+
+!/node_modules/jquery.cookie
+/node_modules/jquery.cookie/*
+!/node_modules/jquery.cookie/jquery.cookie.js
+
+!/node_modules/bootstrap-switch
+/node_modules/bootstrap-switch/*
+!/node_modules/bootstrap-switch/dist
+/node_modules/bootstrap-switch/dist/css/*
+!/node_modules/bootstrap-switch/dist/css/bootstrap3
+/node_modules/bootstrap-switch/dist/css/bootstrap3/*
+!/node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css
+/node_modules/bootstrap-switch/dist/js/*
+!/node_modules/bootstrap-switch/dist/js/bootstrap-switch.js
