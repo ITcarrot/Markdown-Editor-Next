@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Markdown Printer</title>
-    <meta charset="utf-8" />
 
-    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../../core/views/module/bootstrap-custom.css" />
-    <link rel="stylesheet" href="../../core/views/theme/uoj-theme.css" />
+<head>
+  <title>Markdown Printer</title>
+  <meta charset="utf-8" />
 
-    <script src="../../../node_modules/marked/marked.min.js"></script>
-    <script src="../../../node_modules/katex/dist/katex.js"></script>
-    <script src="../../../node_modules/katex/dist/contrib/auto-render.js"></script>
-    <link rel="stylesheet" href="../../../node_modules/katex/dist/katex.css" />
-    <script src="../Hightlight/prism/prism.min.js"></script>
-    <link rel="stylesheet" href="../Hightlight/prism/prism.css" />
-    <script src="../../core/controllers/renderer.js"></script>
-    <link rel="stylesheet" href="../../core/views/state/render.css" />
+  <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../../core/views/module/bootstrap-custom.css" />
+  <link rel="stylesheet" href="../../core/views/theme/uoj-theme.css" />
 
-    <script src="../../../node_modules/jquery.cookie/jquery.cookie.js"></script>
-    <script src="../../../node_modules/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
-    <link
-      rel="stylesheet"
-      href="../../../node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css"
-    />
+  <script src="../../../node_modules/marked/marked.min.js"></script>
+  <script src="../../../node_modules/katex/dist/katex.js"></script>
+  <script src="../../../node_modules/katex/dist/contrib/auto-render.js"></script>
+  <link rel="stylesheet" href="../../../node_modules/katex/dist/katex.css" />
+  <script src="../Hightlight/prism/prism.min.js"></script>
+  <link rel="stylesheet" href="../Hightlight/prism/prism.css" />
+  <script src="../../core/controllers/preview-renderer.js"></script>
+  <link rel="stylesheet" href="../../core/views/state/render.css" />
 
-    <script src="../../plugins/Image/image.js"></script>
-    <link rel="stylesheet" href="../../plugins/Image/image.css" />
+  <script src="../../../node_modules/jquery.cookie/jquery.cookie.js"></script>
+  <script src="../../../node_modules/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+  <link rel="stylesheet" href="../../../node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
 
-    <script src="./printer-panel.js"></script>
-    <link rel="stylesheet" href="./print.css" />
-  </head>
-  <body style="width: 794px; margin: auto">
-    <article id="content"></article>
-    <div id="div_page_size">
-      <input type="checkbox" id="page_size" />
-    </div>
-    <button class="btn btn-default btn-lg" id="print_button">打印</button>
-  </body>
+  <script src="../../plugins/Image/image.js"></script>
+  <link rel="stylesheet" href="../../plugins/Image/image.css" />
+
+  <script src="./printer-panel.js"></script>
+  <link rel="stylesheet" href="./print.css" />
+</head>
+
+<body style="width: 794px; margin: auto">
+  <article id="content"></article>
+  <div id="div_page_size">
+    <input type="checkbox" id="page_size" />
+  </div>
+  <button class="btn btn-default btn-lg" id="print_button">打印</button>
+</body>
+
 </html>

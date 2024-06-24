@@ -1,7 +1,8 @@
 {
-  "name": "MarkdownEditor",
+  "name": "markdown-editor",
   "version": "0.0.1",
   "main": "index.html",
+  "node-remote": "<all_urls>",
   "dependencies": {
     "bootstrap": "^3.4.1",
     "bootstrap-switch": "^3.3.2",

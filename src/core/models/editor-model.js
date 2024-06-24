@@ -1,3 +1,6 @@
+
+var fs = require("fs");
+
 before_window_unload_message = null;
 $(window).on("beforeunload", function () {
   if (before_window_unload_message !== null) {
@@ -132,4 +135,3 @@ var preview_timer = -1;
 var autosave_timer = -1;
 var FileEntry = null;
 var saved;
-var fs = require("fs");
