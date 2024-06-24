@@ -115,3 +115,5 @@ $(function () {
     };
   });
 });
+
+module.exports = { imgExtract, image_set, updateImgPool, getImgStr };

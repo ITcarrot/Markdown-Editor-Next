@@ -6,9 +6,15 @@
     "bootstrap": "^3.4.1",
     "bootstrap-switch": "^3.3.2",
     "codemirror": "^5.65.16",
+    "jest-environment-jsdom": "^29.7.0",
     "jquery": "^3.7.1",
     "jquery.cookie": "^1.4.1",
+    "jsdom": "^24.1.0",
     "katex": "^0.16.10",
-    "marked": "^13.0.0"
+    "marked": "^13.0.0",
+    "text-encoding": "^0.7.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
