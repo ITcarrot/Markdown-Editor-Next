@@ -24,3 +24,4 @@ function RenderMarkdown(dest, content) {
   Prism.highlightAll();
   renderMathInElement(dest[0], MathConfig);
 }
+  

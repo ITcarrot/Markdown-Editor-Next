@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 global.$ = require("jquery");
-const { imgExtract, image_set, updateImgPool, getImgStr } = require('../js/image');
+const { imgExtract, image_set, updateImgPool, getImgStr } = require('../src/plugins/Image/image');
 
 function imageToBase64(imagePath) {
     const image = fs.readFileSync(imagePath);

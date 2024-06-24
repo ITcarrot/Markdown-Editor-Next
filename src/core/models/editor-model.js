@@ -85,7 +85,7 @@ onload = function () {
   $("#new").on("click", function () {
     var x = window.screenX + 10;
     var y = window.screenY + 10;
-    window.open("index.html", "_blank", "screenX=" + x + ",screenY=" + y);
+    window.open("../../../index.html", "_blank", "screenX=" + x + ",screenY=" + y);
   });
   $("#open").on("click", function () {
     if (!saved && !confirm("您所编辑的内容尚未保存，是否继续？")) return;
@@ -123,7 +123,7 @@ onload = function () {
       alert("请先保存");
       return;
     }
-    window.open("print.html?" + encodeURI(FileEntry));
+    window.open("../../plugins/Printer/print.html?" + encodeURI(FileEntry));
   });
 };
 
