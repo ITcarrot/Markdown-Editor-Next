@@ -1,17 +1,3 @@
-// const editor_model = require('./models/editor-model.js');
-// const event_registry = require('./controllers/event-registry.js');
-
-// const {
-//   handleWindowBeforeUnload,
-//   handleEditorChange,
-//   handleEditorPaste,
-//   handleNewFile,
-//   handleOpenFile,
-//   handleOpenFileChange,
-//   handleSaveFile,
-//   handleSaveFileChange,
-//   handlePrint
-// } = require('./models/event-handlers.js');
 
 onload = function () {
   editor_model.setStatusSaved(false);
@@ -25,30 +11,37 @@ onload = function () {
   event_registry.register('saveFile', handleSaveFile);
   event_registry.register('saveFileChange', handleSaveFileChange);
   event_registry.register('print', handlePrint);
-  
   event_registry.init();
 
-  // editor = CodeMirror($("#editor")[0], {
-  //   mode: "markdown",
-  //   theme: "default",
-  //   indentUnit: 4,
-  //   indentWithTabs: true,
-  //   lineWrapping: true,
-  //   lineNumbers: true,
-  //   autoCloseBrackets: true,
-  //   autoCloseTags: true,
-  //   matchBrackets: true,
-  //   matchTags: true,
-  //   foldGutter: true,
-  //   gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-  //   scrollPastEnd: true,
-  //   highlightSelectionMatches: { annotateScrollbar: true },
-  //   styleActiveLine: { nonEmpty: true },
-  //   extraKeys: {
-  //     "Ctrl-S": (cm) => { $("#save").trigger("click"); },
-  //     "Ctrl-/": "toggleComment",
-  //     Enter: "newlineAndIndentContinueMarkdownList",
-  //     "Ctrl-F": "findPersistent",
-  //   },
-  // });
+  // Panel registration
+  panelController.registerPanel('latex-math-panel', {
+    toggle: () => $('#latex-math-panel').toggle(),
+    show: () => $('#latex-math-panel').show(),
+    hide: () => $('#latex-math-panel').hide()
+  });
+
+  panelController.registerPanel('image-panel', {
+    toggle: () => $('#image-panel').toggle(),
+    show: () => $('#image-panel').show(),
+    hide: () => $('#image-panel').hide()
+  });
+
+  panelController.registerPanel('printer-panel', {
+    toggle: () => $('#printer-panel').toggle(),
+    show: () => $('#printer-panel').show(),
+    hide: () => $('#printer-panel').hide()
+  });
+
+  // Bind buttons to toggle panels
+  $('#toggle-latex-math-panel').click(() => panelController.togglePanel('latex-math-panel'));
+  $('#toggle-image-panel').click(() => panelController.togglePanel('image-panel'));
+  $('#toggle-printer-panel').click(() => panelController.togglePanel('printer-panel'));
+
+  // Hint registration
+  hintController.registerHint('saveReminder', () => {
+    console.log('Don\'t forget to save your work!');
+  });
+
+  // Trigger the hint
+  hintController.triggerHint('saveReminder');
 };
